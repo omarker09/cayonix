@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+:root {
+  --semi-text-gray: #c7cdd3;
+}
+
+#tsparticles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: flex;
+}
+
+/* Landing Page Animations Start here*/
+
+.before-transt-right {
+  margin-left: -150px;
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+
+.after-transt-right {
+  margin-left: 0px;
+  opacity: 1;
+  transition: ease-in-out 1s;
+}
+
+.before-transt-left {
+  margin-left: 150px;
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+
+.after-transt-left {
+  margin-left: 0px;
+  opacity: 1;
+  transition: ease-in-out 1s;
+}
+
+.before-transt-down {
+  margin-top: 150px;
+  opacity: 0;
+  transition: ease-in-out 500ms;
+}
+
+.after-transt-down {
+  margin-top: 0px;
+  opacity: 1;
+  transition: ease-in-out 500ms;
+}
+
+/* Landing Page Animations End here*/
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-borderless {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.17);
+}
+
+.landig-p-text {
+  color: var(--semi-text-gray);
+}
+.landing-height {
+  height: 500px;
+}
+.join-section {
+  height: 200px;
+  background-color: aqua;
+}
+
+.working-section {
+  background: rgb(2,0,36);
+  background: linear-gradient(69deg, rgba(2,0,36,1) 0%, rgba(19,37,66,1) 35%, rgba(12,7,36,1) 100%);
+  
+}
+
+.disable-select-drag {
+  user-select: none;
+  -webkit-user-drag: none;
+}
