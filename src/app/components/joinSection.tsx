@@ -16,7 +16,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const JoinSection = () => {
   return (
-    <div className=" z-50 px-16 relative flex items-center justify-center h-36 glass-borderless w-full ">
+    <div className=" z-50 px-9 md:px-16 relative flex items-center justify-center h-36  w-full ">
       <div className="flex items-center flex-col justify-center w-full">
         <p className="landig-p-text">used accross 1000+ client</p>
         <div className="flex items-center gap-10 justify-center w-full">

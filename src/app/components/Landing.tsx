@@ -3,24 +3,22 @@ import { useEffect, useState } from "react";
 import "../globals.css"
 import ParticlesBackground from "./particles/ParticlesBackground";
 import Navbar from "@/components/navbar";
-import { useSelector, useDispatch } from "react-redux";
-import { Switcher } from '@/lib/redux-toolkit/slices/particlesSwitcher';
+import { useSelector } from "react-redux";
 import { RootState } from "@/lib/redux-toolkit/store";
+import JoinSection from "./joinSection";
+
 export default function Landing() {
     const [activateTrans, setActivateTranst] = useState(false)
-    const [showParticles, setSchowParticles] = useState(false)
     const selectValue = useSelector((state: RootState) => state.switcherParticles)
 
     useEffect(() => {
         console.log(selectValue);
         setActivateTranst(true)
     }, [])
-    // <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
-    // "absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+   
     return (
-        <div className="flex items-center justify-center bg-black flex-col gap-3 overflow-x-hidden ">
-            <Navbar />
-            <div className="flex flex-col px-5 items-center  landing-height  gap-6 z-0 justify-center overflow-hidden w-full inset-0  ">
+        <div className="flex items-center justify-center bg-black flex-col gap-3 overflow-x-hidden inset-0 z-0 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+            <div className="flex flex-col px-9 pt-32  md:px-16 items-center  landing-height  gap-6 z-0 justify-center overflow-hidden w-full inset-0  ">
                 {selectValue && <ParticlesBackground />}
                 
                 <div>
@@ -36,7 +34,7 @@ export default function Landing() {
                     <button className={activateTrans === true ? " p-2  text-white rounded-md after-transt-down" : " p-2  text-white rounded-md before-transt-down"}>Contact US</button>
                 </div>
             </div>
-
+            <JoinSection/>
         </div>
     );
 }

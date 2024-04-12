@@ -78,6 +78,9 @@
 
 :root {
   --semi-text-gray: #c7cdd3;
+  --divder-dark-mode-top: #888888;
+  --divider-sections-dark: #383838;
+  --dark-mode-border-color: #2e2d2d;
 }
 
 #tsparticles canvas {
@@ -88,44 +91,38 @@
 }
 
 /* Landing Page Animations Start here*/
-
 .before-transt-right {
   margin-left: -150px;
   opacity: 0;
   transition: ease-in-out 1s;
 }
-
 .after-transt-right {
   margin-left: 0px;
   opacity: 1;
   transition: ease-in-out 1s;
 }
-
 .before-transt-left {
   margin-left: 150px;
   opacity: 0;
   transition: ease-in-out 1s;
 }
-
 .after-transt-left {
   margin-left: 0px;
   opacity: 1;
   transition: ease-in-out 1s;
 }
-
 .before-transt-down {
   margin-top: 150px;
   opacity: 0;
   transition: ease-in-out 500ms;
 }
-
 .after-transt-down {
   margin-top: 0px;
   opacity: 1;
   transition: ease-in-out 500ms;
 }
-
 /* Landing Page Animations End here*/
+
 .glass {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(35px);
@@ -136,7 +133,6 @@
   border-left: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
-
 .glass-borderless {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
@@ -150,6 +146,7 @@
 .landing-height {
   height: 500px;
 }
+
 .join-section {
   height: 200px;
   background-color: aqua;
@@ -158,10 +155,25 @@
 .working-section {
   background: rgb(2,0,36);
   background: linear-gradient(69deg, rgba(2,0,36,1) 0%, rgba(19,37,66,1) 35%, rgba(12,7,36,1) 100%);
-  
 }
 
 .disable-select-drag {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.divider-top {
+  background-color: var( --divder-dark-mode-top);
+  height: 1px;
+  width: 100%;
+}
+
+.divider-sections {
+  background-color: var(--divider-sections-dark);
+  height: 1px;
+  width: 100%;
+}
+
+.cards-border-dark {
+  border: solid 1px var(--dark-mode-border-color)
 }

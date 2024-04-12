@@ -36,11 +36,11 @@ function Navbar() {
     };
   }, []);
   return (
-    <div style={{zIndex: 1000}} className={currentScroll ? 'py-5 px-9 md:px-16 duration-300 glass-borderless fixed top-0 w-full  flex items-center justify-between text-center' : 'py-5 px-9 md:px-16 w-full duration-300 bg-transparent fixed top-0  flex items-center justify-between text-center'}>
+    <div style={{zIndex: 1000}} className={currentScroll ? 'py-5 px-9 md:px-16 z-50 duration-300 glass-borderless fixed top-0 w-full  flex items-center justify-between text-center' : 'py-5 px-9 md:px-16 w-full z-50 duration-300 bg-transparent fixed top-0  flex items-center justify-between text-center'}>
       <div>
         <h1 className='text-white text-4xl'>Logo</h1>
       </div>
-      <nav className='flex items-center hidden sm:flex gap-4'>
+      <nav className=' items-center hidden sm:flex gap-4'>
         <Link className='text-sm duration-300 hover:text-blue-400' href={"/"}>Overview</Link>
         <Link className='text-sm duration-300 hover:text-blue-400' href={"/"}>Legal Reaserch</Link>
         <Link className='text-sm duration-300 hover:text-blue-400' href={"/"}>Blog</Link>
