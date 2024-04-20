@@ -6,7 +6,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 
 const particlesSlice = createSlice({
   name: 'counter',
-  initialState: false,
+  initialState: true,
   reducers: {
     Switcher: (state, action: PayloadAction<boolean>) => {
       return !state

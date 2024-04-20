@@ -12,13 +12,12 @@ export default function Landing() {
     const selectValue = useSelector((state: RootState) => state.switcherParticles)
 
     useEffect(() => {
-        console.log(selectValue);
         setActivateTranst(true)
     }, [])
    
     return (
         <div className="flex items-center justify-center bg-black flex-col gap-3 overflow-x-hidden inset-0 z-0 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
-            <div className="flex flex-col px-9 pt-32  md:px-16 items-center  landing-height  gap-6 z-0 justify-center overflow-hidden w-full inset-0  ">
+            <div className="flex flex-col px-9   md:px-16 items-center  landing-height  gap-6 z-0 justify-center overflow-hidden w-full inset-0  ">
                 {selectValue && <ParticlesBackground />}
                 
                 <div>

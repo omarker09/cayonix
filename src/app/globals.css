@@ -78,9 +78,11 @@
 
 :root {
   --semi-text-gray: #c7cdd3;
+  --dark-mode-border-color: #383737;
   --divder-dark-mode-top: #888888;
   --divider-sections-dark: #383838;
-  --dark-mode-border-color: #2e2d2d;
+  --default-verticals-padding: 30px 0px 30px 0px;
+  --sec-theme-ackground: #2a2a2b;
 }
 
 #tsparticles canvas {
@@ -135,7 +137,7 @@
 }
 .glass-borderless {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(17px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 5px 22px 0 rgba(0, 0, 0, 0.17);
 }
@@ -157,6 +159,22 @@
   background: linear-gradient(69deg, rgba(2,0,36,1) 0%, rgba(19,37,66,1) 35%, rgba(12,7,36,1) 100%);
 }
 
+.box {
+  display: flex;
+  color: white;
+}
+.box:hover{
+  background-color: white;
+}
+.box:hover h2 {
+  color: black;
+}
+.box:hover span {
+  color: black;
+}
+.box:hover p {
+  color: black;
+}
 .disable-select-drag {
   user-select: none;
   -webkit-user-drag: none;
@@ -174,6 +192,126 @@
   width: 100%;
 }
 
+.small-card-divider {
+  background-color: var(--divider-sections-dark);
+  height: 1px;
+  width: 100%;
+}
 .cards-border-dark {
-  border: solid 1px var(--dark-mode-border-color)
+  border: solid 1px var(--dark-mode-border-color);
+}
+.cards-border-dark-bottom {
+  border-bottom: solid 1px var(--dark-mode-border-color);
+}
+.card-hover-bg {
+  background-color: transparent;
+  transition-duration: 300ms;
+}
+.card-hover-bg:hover {
+  background-color: var(--dark-mode-border-color);
+  transition-duration: 300ms;
+}
+
+.card-themes-main {
+  background-color: var(--sec-theme-ackground);
+}
+
+.inputs-background-color {
+  background-color: #252529;
+}
+
+.inputs-border-color {
+  border: solid 1px #3d3d3f;
+}
+
+.focus-outline {
+  outline: none;
+}
+.focus-outline:focus {
+  border-color:  white;
+}
+.vertical-sections-padding {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.vertical-sections-padding-top{
+  padding-top: 35px;
+}
+.vertical-sections-padding-bottom{
+  padding-bottom: 35px;
+}
+.special-33-min-width {
+  min-width: 33%;
+}
+
+/*
+Animation URI : https://codepen.io/michellebarker/pen/gOMBPQj
+*/
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.wrapper {
+	min-width: min(40rem, 100%);
+}
+
+.box-anim {
+  border-radius: 10px;
+	border: 0.35rem solid;
+	padding: 10px;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }
