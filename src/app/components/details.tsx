@@ -12,7 +12,7 @@ const Details = () => {
         <div className=" z-50 px-9 md:px-16 flex flex-col duration-300 overflow-hidden relative vertical-sections-padding gap-3 items-center bg-black justify-center h-auto  w-full ">
             <div className="flex w-full items-center gap-4">
                 <span className="bg-white w-16  h-[2px]"></span>
-                <p className="text-sm text-gray-300">Our Service Benefits</p>
+                <p className="text-sm text-gray-300">Service Benefits</p>
             </div>
             <div className="w-full flex flex-wrap lg:flex-nowrap  duration-300 gap-4 h-full  items-center justify-between">
                 <div className="  h-full flex duration-300 flex-col  items-start justify-start cards-border-dark p-5 rounded-md  gap-4 w-full">

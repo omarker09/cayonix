@@ -32,8 +32,7 @@ const Contact = () => {
                         <span className="inputs-background-color inputs-border-color rounded-full flex items-center justify-center p-2">
                             <HiOutlineMail size={18} />
                         </span>
-                        <h1 className="text-sm">Mail Me at :</h1>
-                        <span className=" text-blue-400 text-sm">omarkerbouchedev@gmail.com</span>
+                        <h1 className="text-sm">Mail Us Now</h1>
                     </div>
                 </div>
                 <div className="w-full cards-border-dark rounded-lg flex flex-col items-start justify-center p-4 gap-4">

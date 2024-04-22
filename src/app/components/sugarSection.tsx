@@ -1,6 +1,6 @@
 import React from "react";
 import "../globals.css";
-
+import Link from "next/link";
 type Props = {}
 
 function SugarSection({ }: Props) {
@@ -12,10 +12,10 @@ function SugarSection({ }: Props) {
                     </div>
                     <h1 className=" text-lg sm:text-3xl text-white z-50">What You get</h1>
                     <div className="flex flex-col   ">
-                        <p className=" text-gray-400 text-sm text-start sm:text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.ditiis ea numquam, molestias voluptate, quam at! Repudiandae?</p>
-                        <p className=" text-gray-400 text-sm text-start sm:text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.ditiis.</p>
+                        <p className=" text-gray-400 text-sm text-start sm:text-center">At Cayonix, we pride ourselves on our commitment to excellence, attention to detail, and customer satisfaction. From concept to launch and beyond</p>
+                        <p className=" text-gray-400 text-sm text-start sm:text-center">we work closely with our clients every step of the way to ensure that their goals are not just met, but exceeded.</p>
                     </div>
-                    <button className='py-2 px-2 bg-white rounded-sm z-50 text-black'>Get Started</button>
+                    <Link href={"/contact"} className='py-2 px-2 bg-white rounded-sm z-50 text-black'>Get Started</Link>
                 </div>
 
             </div>

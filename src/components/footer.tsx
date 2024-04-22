@@ -33,15 +33,15 @@ function FooterComp() {
                             <div>
                                 <FooterTitle title="about" />
                                 <FooterLinkGroup col>
-                                    <FooterLink href="#">Flowbite</FooterLink>
-                                    <FooterLink href="#">Tailwind CSS</FooterLink>
+                                    <FooterLink href="#">Agency</FooterLink>
+                                    <FooterLink href="/about">About us</FooterLink>
                                 </FooterLinkGroup>
                             </div>
                             <div>
                                 <FooterTitle title="Follow us" />
                                 <FooterLinkGroup col>
-                                    <FooterLink href="#">Github</FooterLink>
-                                    <FooterLink href="#">Discord</FooterLink>
+                                    <FooterLink href="https://twitter.com/Cayonix_x">Twitter</FooterLink>
+                                    <FooterLink href="https://www.facebook.com/profile.php?id=61558609928095">Facebook</FooterLink>
                                 </FooterLinkGroup>
                             </div>
                             <div>
@@ -57,10 +57,10 @@ function FooterComp() {
                     <div className="w-full sm:flex sm:items-center sm:justify-between">
                         <FooterCopyright href="#" by="Cayonix" year={2024} />
                         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                            <FooterIcon href="#" icon={BsFacebook} />
-                            <FooterIcon href="#" icon={BsInstagram} />
-                            <FooterIcon href="#" icon={BsTwitter} />
-                            <FooterIcon href="#" icon={BsGithub} />
+                            <FooterIcon target="_blank" href="https://www.facebook.com/profile.php?id=61558609928095" icon={BsFacebook} />
+                            <FooterIcon target="_blank"  href="https://www.instagram.com/cayonix1/" icon={BsInstagram} />
+                            <FooterIcon target="_blank"  href="https://twitter.com/Cayonix_x" icon={BsTwitter} />
+                            {/* <FooterIcon target="_blank"  href="#" icon={BsGithub} /> */}
                         </div>
                     </div>
                 </div>

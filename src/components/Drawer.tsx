@@ -15,6 +15,7 @@ import { Switch } from "@/components/ui/switch"
 import { useSelector, useDispatch } from "react-redux";
 import { Switcher } from '@/lib/redux-toolkit/slices/particlesSwitcher';
 import { RootState, AppDispatch } from "../lib/redux-toolkit/store/index"
+import Link from 'next/link';
 
 export default function Drawer({ activeDrawer, setActiveDrawer }: any) {
     const dispatch = useDispatch()
@@ -43,15 +44,19 @@ export default function Drawer({ activeDrawer, setActiveDrawer }: any) {
                             </div>
                         </SheetHeader>
                         <div className='flex flex-col gap-2'>
-                            <h1 className=' text-white text-2xl font-bold'>HOME</h1>
+                            <Link href={"/"} className=' text-white text-2xl font-bold'>HOME</Link>
                             <Divider className="divider-sections" />
                         </div>
                         <div className='flex flex-col gap-2'>
-                            <h1 className=' text-white text-2xl font-bold'>ABOUT</h1>
+                            <Link href={"/about"} className=' text-white text-2xl font-bold'>ABOUT</Link>
                             <Divider className="divider-sections" />
                         </div>
                         <div className='flex flex-col gap-2'>
-                            <h1 className=' text-white text-2xl font-bold'>PROJECTS</h1>
+                            <Link href={"/ourprojects"} className=' text-white text-2xl font-bold'>PROJECTS</Link>
+                            <Divider className="divider-sections" />
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                            <Link href={"/contact"} className=' text-white text-2xl font-bold'>Contact</Link>
                             <Divider className="divider-sections" />
                         </div>
                     </div>
