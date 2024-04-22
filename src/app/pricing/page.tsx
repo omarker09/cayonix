@@ -11,7 +11,7 @@ import Walpper1 from "../../../public/imgs/wallper/photo-1555066932-e78dd8fb77bb
 import Faq from "../components/faq";
 import ScrollTop from "@/components/scrollTop";
 
-const About = () => {
+const Pricing = () => {
 
     return (
         <div className="flex flex-col justify-between h-full  bg-black">
@@ -48,4 +48,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Pricing;

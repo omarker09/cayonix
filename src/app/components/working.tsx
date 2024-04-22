@@ -3,6 +3,7 @@ import React from "react";
 import "../globals.css";
 import DrawCube from "../../../public/animation/gif/giphy.gif"
 import Image from "next/image";
+import  Link  from "next/link";
 
 const Working = () => {
     return (
@@ -12,20 +13,21 @@ const Working = () => {
                     <div className=" w-full flex flex-col gap-4">
                         <div className="flex items-center gap-4">
                             <span className="bg-white w-16  h-[2px]"></span>
-                            <p className="text-sm text-gray-300">Why CHOOSE US</p>
+                            <p className="text-sm text-gray-300">Why Choose Us</p>
                         </div>
                         <div className="w-full">
-                            <h1 className="  text-2xl font-bold text-white">Years Of Experiance</h1>
+                            <h1 className="  text-2xl font-bold text-white">Experiance</h1>
                         </div>
                     </div>
-                    <div>
-                        <p className="text-gray-400 text-sm">With 2 Years of Experience, we bring a fresh perspective coupled with seasoned expertise to every project. Despite our relatively short tenure, our team has swiftly established a reputation for delivering innovative solutions and outstanding results. We leverage our collective knowledge and adaptability to meet the dynamic needs of our clients, ensuring that each engagement is marked by excellence, efficiency, and a commitment to surpassing expectations.</p>
+                    <div className="flex flex-col gap-2">
+                        <p className="text-gray-400 text-sm">We bring a fresh perspective coupled with seasoned expertise to every project. Despite our relatively short tenure, our team has swiftly established a reputation for delivering innovative solutions and outstanding results. We leverage our collective knowledge and adaptability to meet the dynamic needs of our clients</p>
+                        <p className="text-gray-400 text-sm">ensuring that each engagement is marked by excellence, efficiency, and a commitment to surpassing expectations</p>
                     </div>
                     <div className="hidden lg:flex">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
+                        <Link href="/ourprojects" className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</Link>
                     </div>
                     <div className="flex sm:hidden">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
+                        <Link href="/ourprojects" className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</Link>
                     </div>
                 </div>
                 <div className=" hidden sm:flex flex-col items-start justify-start gap-4 h-full w-full py-0 ">
@@ -37,7 +39,7 @@ const Working = () => {
                     />
                     */}
                     <div className=" flex lg:hidden">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
+                        <Link href="/ourprojects" className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</Link>
                     </div>
                 </div>
             </div>

@@ -200,6 +200,11 @@
 .cards-border-dark {
   border: solid 1px var(--dark-mode-border-color);
 }
+
+.cards-border-dark-top {
+  border-top: solid 1px var(--dark-mode-border-color);
+}
+
 .cards-border-dark-bottom {
   border-bottom: solid 1px var(--dark-mode-border-color);
 }

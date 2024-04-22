@@ -16,19 +16,21 @@ export default function Home() {
     <div className="flex flex-col bg-black  h-full inset-0 ">
       <div className="  size-full h-full items-center " />
       <Navbar />
-      <ScrollTop/>
+      <ScrollTop />
       <Landing />
-      <Divider className="divider-top"/>
+      <Divider className="divider-top" />
       <Working />
-      <Services/>
-      <Details/>
-      <Divider className="divider-sections"/>
-      <OurProjects/>
-      <ClientsReview/>
-      <Divider className="divider-sections"/>
-      <Faq/>
-      <SugarSection/>
-      <FooterComp/>
+      <Services />
+      <Details />
+      <Divider className="divider-sections" />
+      <OurProjects />
+      <ClientsReview />
+      <Divider className="divider-sections" />
+      <div className="px-9 md:px-16 bg-black z-50">
+        <Faq />
+      </div>
+      <SugarSection />
+      <FooterComp />
     </div>
   );
 }

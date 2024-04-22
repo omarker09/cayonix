@@ -39,12 +39,6 @@ const Details = () => {
                             <p className="text-gray-400 text-sm">Expert Guidance</p>
                         </span>
                     </div>
-                    <div className="hidden lg:flex">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
-                    </div>
-                    <div className="flex sm:hidden">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
-                    </div>
                 </div>
                 <div className="  h-full flex duration-300 flex-col  items-start justify-start cards-border-dark p-5 rounded-md  gap-4 w-full">
                     <div className=" w-full flex items-start flex-col gap-4">
@@ -69,12 +63,6 @@ const Details = () => {
                             <FaCheck style={{ padding: 2 }} className=" rounded-full text-sm sm:text-lg bg-white text-black" />
                             <p className="text-gray-400 text-sm">Scalable Solutions</p>
                         </span>
-                    </div>
-                    <div className="hidden lg:flex">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
-                    </div>
-                    <div className="flex sm:hidden">
-                        <button className=" py-2 px-5 bg-white text-black rounded-sm">See our Portfolio</button>
                     </div>
                 </div>
             </div>

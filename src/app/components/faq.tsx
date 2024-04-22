@@ -8,10 +8,9 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
-
 const Faq = () => {
     return (
-        <div className="w-full px-9 md:px-16 flex gap-3 flex-col md:flex-row vertical-sections-padding items-start justify-start bg-black z-50">
+        <div className="w-full  flex gap-3 flex-col md:flex-row vertical-sections-padding items-start justify-start bg-black z-50">
             <div className="flex w-full flex-col items-start gap-4">
                 <div>
                     <span className="bg-white w-16  h-[2px]"></span>

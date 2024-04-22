@@ -18,12 +18,12 @@ const Page = () => {
     return (
         <div className="flex flex-col justify-between h-full  bg-black">
             <Navbar />
-            <div className=" z-50 px-9 md:px-16 duration-300 vertical-sections-padding gap-5 cards-border-dark flex flex-col md:flex-row  items-start justify-center ">
-                <div className="w-full flex flex-col gap-6 bg-black z-50 vertical-sections-padding">
-                    <div className="flex w-full items-center justify-between gap-4">
-                        <div className="flex items-center gap-4">
-                            <span className="bg-white w-16  h-[2px]  text-sm sm:text-base"></span>
-                            <h1 className=" text-sm sm:text-base text-gray-300">Our Projects</h1>
+            <div className=" z-50 px-9 md:px-16 duration-300 vertical-sections-padding gap-5 flex flex-col md:flex-row  items-start justify-center ">
+                <div className="w-full flex flex-col gap-7 bg-black z-50 vertical-sections-padding">
+                <div className="flex flex-col gap-3">
+                        <h1 className="text-white text-xl text-start md:text-2xl lg:text-4xl font-extrabold">Our Projects</h1>
+                        <div className="flex items-start flex-col gap-1">
+                            <p className="text-gray-400 text-sm text-start">Explore our portfolio of diverse projects, each a testament to our commitment to innovation, creativity, and excellence.</p>
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center w-full justify-start gap-6 ">

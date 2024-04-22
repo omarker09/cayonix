@@ -17,7 +17,7 @@ import Link from "next/link";
 function FooterComp() {
     return (
         <div className=" z-50 bg-black">
-            <Footer style={{ backgroundColor: "black" }} container className=" bg-black z-50 px-9 md:px-16   cards-border-dark">
+            <Footer style={{ backgroundColor: "black" }} container className=" bg-black z-50 px-9 md:px-16 cards-border-dark-top rounded-none">
                 <div className="w-full ">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 gap-4">
                         <Link href={"/"} className="flex items-start gap-3 py-3">

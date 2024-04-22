@@ -22,7 +22,7 @@ const Contact = () => {
     return (
         <div className="flex flex-col justify-between h-full  bg-black">
             <Navbar />
-            <div className=" z-50 px-9 md:px-16 duration-300 vertical-sections-padding gap-5 cards-border-dark flex flex-col md:flex-row  items-start justify-center ">
+            <div className=" z-50 px-9 md:px-16 duration-300 vertical-sections-padding gap-5  flex flex-col md:flex-row  items-start justify-center ">
                 <div className="text-white  w-full flex flex-col items-start h-full  gap-4">
                     <div className="flex flex-col gap-3">
                         <h1 className="text-white text-xl md:text-2xl lg:text-5xl font-extrabold">Tell me about you.</h1>

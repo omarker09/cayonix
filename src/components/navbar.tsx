@@ -55,8 +55,8 @@ function Navbar() {
       <nav className=' items-center hidden md:flex gap-4'>
         <Link className='text-sm duration-300 hover:text-blue-400' href={"/about"}>About</Link>
         <Link className='text-sm duration-300 hover:text-blue-400' href={"/ourprojects"}>Our Projects</Link>
-        <Link className='text-sm duration-300 hover:text-blue-400' href={"/"}>Articles</Link>
-        <Link className='text-sm duration-300 hover:text-blue-400' href={"/"}>Pricing</Link>
+        {/*<Link className='text-sm duration-300 hover:text-blue-400' href={"/articles"}>Articles</Link>*/}
+        <Link className='text-sm duration-300 hover:text-blue-400' href={"/pricing"}>Pricing</Link>
         <Switch checked={selectValue} className=' h-4 w-9' onClick={() => { switchHandler() }} />
       </nav>
       <div className='flex items-center justify-center gap-3'>
