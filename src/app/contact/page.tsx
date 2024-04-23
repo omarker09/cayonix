@@ -1,15 +1,30 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import "../globals.css";
 import CodingGif from "../../../public/animation/gif/giphy.gif"
 import Image from "next/image";
-import { BsGrid1X2Fill } from "react-icons/bs";
+import CircularProgress from '@mui/material/CircularProgress';
 import Navbar from "@/components/navbar";
 import FooterComp from "@/components/footer";
 import { HiOutlineMail } from "react-icons/hi";
 import Anim1 from "../../../public/animation/lottie/anim1.json"
+import { MdDoneOutline } from "react-icons/md";
+import { toast } from "sonner"
+import { MdError } from "react-icons/md";
+import Spinner from 'react-bootstrap/Spinner';
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
+    const [isSent, setIsSent] = useState(false)
+
+    const [isNoName, setIsNoName] = useState(false)
+    const [isNoEmail, setIsNoEmail] = useState(false)
+    const [isNoMessage, setIsNoMessage] = useState(false)
 
     const defaultOptions = {
         loop: true,
@@ -19,8 +34,52 @@ const Contact = () => {
             preserveAspectRatio: 'xMidYMid slice'
         }
     };
+
+    const handleSubmit = async () => {
+        setIsSent(prev => !prev)
+        if (!name || !email || !message) {
+            setIsError(true)
+            toast("You must fill the Inputs First.", {
+                icon: <MdError className=" text-red-600" size={20} />,
+            })
+        } else {
+            setIsLoading(true)
+            try {
+                const dataFetch = await fetch("https://3067e2be-c234-46f8-9beb-027c2fc2b715-00-gn8719zzmj8p.spock.replit.dev/msg/send", {
+                    method: "POST",
+                    headers: {
+                        'Content-type': "application/json",
+                    },
+                    body: JSON.stringify({
+                        message_name: name,
+                        message_email: email,
+                        message: message
+                    })
+                })
+            } catch {
+                setIsError(true)
+                setIsLoading(false)
+                setEmail("")
+                setName("")
+                setMessage("")
+                toast("Ops Something happend.", {
+                    icon: <MdError className=" text-red-600" size={20} />,
+                })
+            }
+            finally {
+                setIsLoading(false)
+                setIsError(false)
+                setEmail("")
+                setName("")
+                setMessage("")
+                toast("Yor messsage Has Been Sent", {
+                    icon: <MdDoneOutline className=" text-green-500" size={15} />,
+                })
+            }
+        }
+    }
     return (
-        <div className="flex flex-col justify-between h-full  bg-black">
+        <div className="flex flex-col justify-between h-full relative  bg-black">
             <Navbar />
             <div className=" z-50 px-9 md:px-16 duration-300 vertical-sections-padding gap-5  flex flex-col md:flex-row  items-start justify-center ">
                 <div className="text-white  w-full flex flex-col items-start h-full  gap-4">
@@ -42,14 +101,14 @@ const Contact = () => {
                     </div>
                     <div className=" w-full flex flex-col gap-4">
                         <div className="flex items-center gap-4 justify-between">
-                            <input className="w-full rounded-lg text-white inputs-background-color inputs-border-color focus-outline focus-outline" type="text" placeholder="Email*" />
-                            <input className="w-full rounded-lg text-white inputs-background-color inputs-border-color focus-outline focus-outline" type="text" placeholder="Full Name*" />
+                            <input value={email} onChange={(e) => { setEmail(e.target.value) }} className="w-full rounded-lg text-white inputs-background-color inputs-border-color focus-outline" type="text" placeholder="Email*" />
+                            <input value={name} onChange={(e) => { setName(e.target.value) }} className="w-full rounded-lg text-white inputs-background-color inputs-border-color focus-outline focus-outline" type="text" placeholder="Full Name*" />
                         </div>
                         <div className="w-full">
-                            <textarea className=" resize-none w-full h-40 rounded-lg text-white inputs-background-color inputs-border-color focus-outline" name="text" placeholder="Your Message.."></textarea>
+                            <textarea value={message} onChange={(e) => { setMessage(e.target.value) }} className=" resize-none w-full h-40 rounded-lg text-white inputs-background-color inputs-border-color focus-outline" name="text" placeholder="Your Message.."></textarea>
                         </div>
                         <div className="w-full">
-                            <button className="py-2 px-5 bg-slate-400 rounded-lg text-white inputs-background-color inputs-border-color">Send</button>
+                            <button onClick={() => { handleSubmit() }} className="py-2 px-5 bg-slate-400 rounded-lg text-white inputs-background-color inputs-border-color">{isLoading ? <CircularProgress size={15} />: "Send"}</button>
                         </div>
                     </div>
                 </div>

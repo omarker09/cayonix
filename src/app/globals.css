@@ -235,6 +235,12 @@
 .focus-outline:focus {
   border-color:  white;
 }
+.error-focus {
+  outline: none;
+}
+.error-focus:focus {
+  border-color:  red;
+}
 .vertical-sections-padding {
   padding-top: 35px;
   padding-bottom: 35px;
