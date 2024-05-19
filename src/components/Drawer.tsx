@@ -38,7 +38,7 @@ export default function Drawer({ activeDrawer, setActiveDrawer }: any) {
                     <div className='gap-7 flex flex-col'>
                         <SheetHeader>
                             <div className='w-full flex items-end justify-end pr-3'>
-                                <button onClick={() => { setActiveDrawer(false) }} className='p-2 flex items-center card-themes-main justify-center rounded-full cursor-pointer'>
+                                <button onClick={() => { setActiveDrawer(false) }} className='p-2 flex items-center  justify-center rounded-full cursor-pointer'>
                                     <IoMdClose size={25} className='text-white' />
                                 </button>
                             </div>

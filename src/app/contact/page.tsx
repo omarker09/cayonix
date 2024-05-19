@@ -92,6 +92,7 @@ const Contact = () => {
                             <HiOutlineMail size={18} />
                         </span>
                         <h1 className="text-sm">Mail Us Now</h1>
+                        <a href="https://cayonix1@gmail.com" target="_blank" className="text-sm text-slate-300 underline cursor-pointer">cayonix1@gmail.com</a>
                     </div>
                 </div>
                 <div className="w-full cards-border-dark rounded-lg flex flex-col items-start justify-center p-4 gap-4">
