@@ -36,48 +36,40 @@ const Contact = () => {
     };
 
     const handleSubmit = async () => {
-        setIsSent(prev => !prev)
+        const validRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
         if (!name || !email || !message) {
-            setIsError(true)
-            toast("You must fill the Inputs First.", {
-                icon: <MdError className=" text-red-600" size={20} />,
-            })
-        } else {
-            setIsLoading(true)
-            try {
-                const dataFetch = await fetch("https://3067e2be-c234-46f8-9beb-027c2fc2b715-00-gn8719zzmj8p.spock.replit.dev/msg/send", {
-                    method: "POST",
-                    headers: {
-                        'Content-type': "application/json",
-                    },
-                    body: JSON.stringify({
-                        message_name: name,
-                        message_email: email,
-                        message: message
-                    })
-                })
-            } catch {
-                setIsError(true)
-                setIsLoading(false)
-                setEmail("")
-                setName("")
-                setMessage("")
-                toast("Ops Something happend.", {
-                    icon: <MdError className=" text-red-600" size={20} />,
-                })
-            }
-            finally {
-                setIsLoading(false)
-                setIsError(false)
-                setEmail("")
-                setName("")
-                setMessage("")
-                toast("Yor messsage Has Been Sent", {
-                    icon: <MdDoneOutline className=" text-green-500" size={15} />,
-                })
-            }
+            toast("You must fill all the inputs first.", { icon: <MdError className=" text-red-500"  size={20} /> });
+            return;
         }
-    }
+
+        if (!validRegex.test(email)) {
+            toast("Email address is not valid.", { icon: <MdError className=" text-red-500"  size={20} /> });
+            return;
+        }
+
+        setIsLoading(true);
+        try {
+            const response = await fetch("https://your-api-endpoint.com", {
+                method: "POST",
+                headers: { "Content-type": "application/json" },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to send message");
+            }
+
+            toast("Your message has been sent.", { icon: <MdDoneOutline className=" text-green-500"  size={20} /> });
+            setName("");
+            setEmail("");
+            setMessage("");
+        } catch (error) {
+            toast("Oops! Something went wrong.", { icon: <MdError className=" text-red-500"  size={20} /> });
+        } finally {
+            setIsLoading(false);
+        }
+    };
     return (
         <div className="flex flex-col justify-between h-full relative  bg-black">
             <Navbar />

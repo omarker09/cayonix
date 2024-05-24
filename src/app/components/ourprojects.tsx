@@ -7,6 +7,7 @@ import Prj1 from "../../../public/imgs/projects/project-1.png"
 import Prj2 from "../../../public/imgs/projects/project-2.png"
 import Prj3 from "../../../public/imgs/projects/project-3.jpg"
 import Prj4 from "../../../public/imgs/projects/project-4.png"
+import Prj5 from "../../../public/imgs/projects/returant-imgs/landing_img.png"
 
 const OurProjects = () => {
     return (
@@ -24,13 +25,6 @@ const OurProjects = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center w-full justify-start gap-6 ">
                 <Image
-                    src={Prj1}
-                    alt="prj 1"
-                    width={280}
-                    height={280}
-                    className="rounded-lg w-full sm:w-auto object-cover cards-border-dark cursor-pointer"
-                />
-                <Image
                     src={Prj2}
                     alt="prj 1"
                     width={280}
@@ -46,6 +40,13 @@ const OurProjects = () => {
                 />
                 <Image
                     src={Prj4}
+                    alt="prj 1"
+                    width={280}
+                    height={280}
+                    className="rounded-lg w-full sm:w-auto object-cover cards-border-dark cursor-pointer"
+                />
+                <Image
+                    src={Prj5}
                     alt="prj 1"
                     width={280}
                     height={280}

@@ -42,13 +42,13 @@ function Navbar() {
     };
   }, []);
   return (
-    <div style={{ zIndex: 400 }} className={currentScroll ? 'py-3 px-9 md:px-16 z-50 duration-500 glass-borderless sticky top-0 w-full  flex items-center justify-between text-center' : 'py-3 px-9 md:px-16 w-full z-50 duration-500 bg-transparent sticky top-0  flex items-center justify-between text-center '}>
+    <div style={{ zIndex: 400 }} className={currentScroll ? 'py-2 px-9 md:px-16 z-50 duration-500 glass-borderless sticky top-0 w-full  flex items-center justify-between text-center' : 'py-2 px-9 md:px-16 w-full z-50 duration-500 bg-transparent sticky top-0  flex items-center justify-between text-center '}>
       <Link href={"/"}>
         <Image
           alt='logo'
           src={Logo1}
-          height={80}
-          width={80}
+          height={65}
+          width={65}
           className='disable-select-drag'
         />
       </Link>

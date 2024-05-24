@@ -34,7 +34,7 @@ export default function Drawer({ activeDrawer, setActiveDrawer }: any) {
     return (
         <Sheet open={activeDrawer}>
             <div className='flex flex-col md:hidden'>
-                <SheetContent className="w-[250px] bg-black flex flex-col justify-between ">
+                <SheetContent className="w-[250px] bg-black border-gray-500 flex flex-col justify-between ">
                     <div className='gap-7 flex flex-col'>
                         <SheetHeader>
                             <div className='w-full flex items-end justify-end pr-3'>
@@ -63,7 +63,7 @@ export default function Drawer({ activeDrawer, setActiveDrawer }: any) {
                     <div className='flex flex-col gap-2'>
                         <div className='flex items-center justify-between w-full'>
                             <h1 className=' text-white text-lg font-bold'>Effects Trigger</h1>
-                            <Switch checked={selectValue} className=' h-4 w-9' onClick={() => { switchHandler() }} />
+                            <Switch checked={selectValue} className=' h-4 w-9 text-black bg-slate-600' onClick={() => { switchHandler() }} />
                         </div>
                     </div>
                 </SheetContent>

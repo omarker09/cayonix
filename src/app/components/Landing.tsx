@@ -20,9 +20,8 @@ export default function Landing() {
         <div className="flex items-center justify-center bg-black flex-col gap-3 overflow-x-hidden inset-0 z-0 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
             <div className="flex flex-col px-9   md:px-16 items-center  landing-height  gap-6 z-0 justify-center overflow-hidden w-full inset-0  ">
                 {selectValue && <ParticlesBackground />}
-                
                 <div>
-                    <h1 className={activateTrans === true ? " text-3xl sm:text-5xl text-white text-center align-super font-semibold after-transt-right" : "text-3xl sm:text-5xl text-white text-center font-semibold before-transt-right"}>Modern Technology</h1>
+                    <h1 className={activateTrans === true ? " text-3xl sm:text-5xl text-white text-center align-super font-semibold after-transt-right" : "text-3xl sm:text-4xl text-white text-center font-semibold before-transt-right"}>Discover Modern Technology</h1>
                 </div>
                 <div>
                     <p className={activateTrans === true ? "landig-p-text text-sm sm:text-base text-center after-transt-right" : "landig-p-text text-sm sm:text-base text-center before-transt-right"}>Cayonix is a dynamic web development company dedicated to crafting innovative digital solutions</p>

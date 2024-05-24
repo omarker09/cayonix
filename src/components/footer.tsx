@@ -44,6 +44,7 @@ function FooterComp() {
                                     <FooterLink href="https://www.facebook.com/profile.php?id=61558609928095">Facebook</FooterLink>
                                 </FooterLinkGroup>
                             </div>
+                            {/*
                             <div>
                                 <FooterTitle title="Legal" />
                                 <FooterLinkGroup col>
@@ -51,6 +52,7 @@ function FooterComp() {
                                     <FooterLink href="#">Terms &amp; Conditions</FooterLink>
                                 </FooterLinkGroup>
                             </div>
+                            */}
                         </div>
                     </div>
                     <FooterDivider />
