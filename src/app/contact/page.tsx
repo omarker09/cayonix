@@ -17,23 +17,7 @@ const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-
     const [isLoading, setIsLoading] = useState(false);
-    const [isError, setIsError] = useState(false);
-    const [isSent, setIsSent] = useState(false)
-
-    const [isNoName, setIsNoName] = useState(false)
-    const [isNoEmail, setIsNoEmail] = useState(false)
-    const [isNoMessage, setIsNoMessage] = useState(false)
-
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: Anim1,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
 
     const handleSubmit = async () => {
         const validRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
