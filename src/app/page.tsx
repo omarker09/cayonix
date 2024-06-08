@@ -23,7 +23,7 @@ export default function Home() {
       <Services />
       <Details />
       <Divider className="divider-sections" />
-      <OurProjects />
+      {/* <OurProjects /> */}
       <ClientsReview />
       <Divider className="divider-sections" />
       <div className="px-9 md:px-16 bg-black z-50">
