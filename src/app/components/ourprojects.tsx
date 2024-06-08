@@ -45,13 +45,6 @@ const OurProjects = () => {
                     height={280}
                     className="rounded-lg w-full sm:w-auto object-cover cards-border-dark cursor-pointer"
                 />
-                <Image
-                    src={Prj5}
-                    alt="prj 1"
-                    width={280}
-                    height={280}
-                    className="rounded-lg w-full sm:w-auto object-cover cards-border-dark cursor-pointer"
-                />
             </div>
         </div>
     );
