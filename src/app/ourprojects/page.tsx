@@ -23,7 +23,7 @@ const Page = () => {
                             e.dirName ? (
                                 <Link href={e.dirName} key={index}>
                                     <Image
-                                        src={e.img1}
+                                        src={e.main}
                                         alt={`Project ${index + 1}`}
                                         width={280}
                                         height={280}

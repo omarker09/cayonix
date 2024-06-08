@@ -3,9 +3,7 @@ import Link from "next/link";
 import Banner from "../../../../public/imgs/projects/odibay/banner.png"
 import Prj1 from "../../../../public/imgs/projects/odibay/Black Minimalist Website Mockup Instagram Post.png"
 
-import Prj2 from "../../../../public/imgs/projects/odibay/localhost_3001_ (1).png"
-import Prj3 from "../../../../public/imgs/projects/odibay/localhost_3001_ (2).png"
-import Prj4 from "../../../../public/imgs/projects/odibay/localhost_3001_ (3).png"
+import Main from "../../../../public/imgs/projects/odibay/main.png"
 import Prj5 from "../../../../public/imgs/projects/odibay/localhost_3001_ (4).png"
 import Prj6 from "../../../../public/imgs/projects/odibay/localhost_3001_.png"
 import Full from "../../../../public/imgs/projects/odibay/odibay-full-vertical.png"
@@ -17,6 +15,7 @@ const data = [
     {
         title: "odibay",
         dirName: "/ourprojects/odibay",
+        main : Main,
         banner: Banner,
         img1: CtegoryPage,
         img2: CtegoryCart,
